@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
     <title>Media Belajar - Toko Buku</title>
 </head>
 
@@ -25,61 +28,104 @@
         <section class="content" id="About">
             <img src="logo.png" alt="Logo Media Belajar" width="200px">
             <p>Media Belajar adalah toko buku yang menyediakan beragam koleksi buku edukatif untuk pelajar, pengajar,
-                dan
-                masyarakat umum. Kami berkomitmen menyediakan sumber belajar berkualitas bagi setiap orang yang ingin
-                mengembangkan pengetahuannya.</p>
+                dan masyarakat umum. Kami berkomitmen menyediakan sumber belajar berkualitas bagi setiap orang yang
+                ingin mengembangkan pengetahuannya.</p>
 
             <h2>Layanan Kami</h2>
-            <p>Berikut adalah beberapa buku yang tersedia untuk mendukung kebutuhan belajar Anda.
-                Setiap buku dilengkapi dengan jumlah halaman dan harga terbaru.</p>
-            <table border="1" width="600px" height="300px">
-                <thead align="center">
+            <p>Kami menyediakan berbagai layanan untuk mendukung kebutuhan belajar Anda. Berikut adalah beberapa layanan
+                unggulan kami:</p>
+
+            <table class="table">
+                <thead>
                     <tr>
-                        <td>Nama</td>
-                        <td>Deskripsi</td>
-                        <td>Harga</td>
+                        <th>Nama Layanan</th>
+                        <th>Deskripsi</th>
+                        <th>Harga</th>
                     </tr>
                 </thead>
-                <tbody align="center">
+                <tbody>
                     <tr>
-                        <td>Buku Tulis</td>
-                        <td>Isi 38 Lembar (1pack isi 10)</td>
-                        <td>Rp. 48.000</td>
+                        <td>Penyewaan Buku</td>
+                        <td>Layanan penyewaan buku edukatif untuk berbagai kalangan.</td>
+                        <td>Rp. 5.000/buku per minggu</td>
                     </tr>
                     <tr>
-                        <td>Buku Gambar</td>
-                        <td>Ukuran A4 (1pack isi 4)</td>
-                        <td>Rp. 58.000</td>
+                        <td>Pembelian Buku</td>
+                        <td>Penjualan berbagai buku edukatif dan sastra.</td>
+                        <td>Mulai dari Rp. 100.000</td>
+                    </tr>
+                    <tr>
+                        <td>Diskon Buku Fisik</td>
+                        <td>Diskon khusus untuk pembelian buku fisik pada periode tertentu.</td>
+                        <td>Diskon hingga 50%</td>
+                    </tr>
+                    <tr>
+                        <td>Konsultasi Buku</td>
+                        <td>Konsultasi untuk membantu menemukan buku yang sesuai dengan minat belajar Anda.</td>
+                        <td>Gratis</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
+        <h2>Daftar Produk Kami</h2>
+        <section class="product-list" id="Products">
+            <article class="product-card">
+                <figure>
+                    <img src="BUKU.jpg" alt="Buku">
+                    <figcaption>Dasar - Dasar Teknik Informatika</figcaption>
+                </figure>
+                <h3>Rp.192.000,00</h3>
+                <p>Kategori: Teknik Informatika</p>
+            </article>
+
+            <article class="product-card">
+                <figure>
+                    <img src="BUKU 2 .jpg" alt="Buku">
+                    <figcaption>Sejarah Indonesia</figcaption>
+                </figure>
+                <h3>Rp.105.000,00</h3>
+                <p>Kategori: Sejarah</p>
+            </article>
+
+            <article class="product-card">
+                <figure>
+                    <img src="NOVEL.jpg" alt="Novel">
+                    <figcaption>Cantik Itu Luka - Eka Kurniawan</figcaption>
+                </figure>
+                <h3>Rp.100.000,00</h3>
+                <p>Kategori: Novel</p>
+            </article>
+        </section>
+
         <section class="contact" id="Contact">
             <h2>Kontak Kami</h2>
             <form action="">
-                <label for="">Nama</label>
-                <input type="text" placeholder="Masukkan Nama">
+                <label for="name">Nama</label>
+                <input type="text" id="name" placeholder="Masukkan Nama" required>
                 <br>
                 <br>
-                <label for="">Email</label>
-                <input type="email" placeholder="Masukkan Email">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Masukkan Email" required>
                 <br>
                 <br>
-                <label for="">Pesan</label>
-                <textarea name="pesan" id="pesan" cols="30" rows="10">Pesan</textarea>
+                <label for="pesan">Pesan</label>
+                <textarea name="pesan" id="pesan" cols="30" rows="10" required placeholder="Pesan"></textarea>
                 <br>
                 <br>
                 <button type="submit">Submit</button>
             </form>
         </section>
     </main>
-    <hr>
-    <footer>
-        <p>Media Belajar | Jl. Menuju Masa Depan No. 123, Kota Sukses </p>
+    <aside class="social-icons">
         <a href="https://github.com/salwaekaafianii"><i class="fa-brands fa-github"></i></a>
         <a href="https://www.instagram.com/salwaekaaf"><i class="fa-brands fa-square-instagram"></i></a>
+    </aside>
+
+    <footer>
+        <p>Media Belajar | Jl. Menuju Masa Depan No. 123, Kota Sukses</p>
     </footer>
 
 </body>
+
 </html>
