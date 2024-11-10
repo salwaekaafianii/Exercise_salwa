@@ -14,8 +14,9 @@
 <body>
     <header>
         <nav>
-            <img src="logo book.png" alt="Logo Media Belajar" width="50px"> <!-- Logo di navbar -->
+            <img src="logo book.png" alt="Logo Media Belajar" width="50px">
             <h1>MEDIA BELAJAR</h1>
+            <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()"> ☰ </button>
             <ul>
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#About">About</a></li>
@@ -26,15 +27,17 @@
     <hr>
     <main>
         <section class="about-section" id="Home">
+            <figure class="about-image">
+            </figure>
             <article>
                 <h3>MEDIA BELAJAR</h3>
                 <p>Media Belajar adalah toko buku yang menyediakan beragam koleksi buku edukatif untuk pelajar,
                     pengajar,
                     dan masyarakat umum. Kami berkomitmen menyediakan sumber belajar berkualitas bagi setiap orang yang
                     ingin mengembangkan pengetahuannya.</p>
-                <a href="#More" class="button">Selengkapnya</a> <!-- Tombol Selengkapnya -->
+                <a href="#More" class="button">Selengkapnya</a>
             </article>
-            <img src="book.png" alt="Ilustrasi Media Belajar" width="200px"> <!-- Gambar di sebelah kanan -->
+            <img src="book.png" alt="Ilustrasi Media Belajar" width="200px">
         </section>
 
         <section class="services-section" id="About">
@@ -103,6 +106,30 @@
                 <h3>Rp.100.000,00</h3>
                 <p>Kategori: Novel</p>
             </article>
+            <article class="product-card">
+                <figure>
+                    <img src="NOVEL 1.jpeg" alt="Novel">
+                    <figcaption>Pulang Pergi -Tere Liye</figcaption>
+                </figure>
+                <h3>Rp.115.000,00</h3>
+                <p>Kategori: Novel</p>
+            </article>
+            <article class="product-card">
+                <figure>
+                    <img src="BUKU 3.jpg" alt="Buku">
+                    <figcaption>Bahasa Indonesia</figcaption>
+                </figure>
+                <h3>Rp.95.000,00</h3>
+                <p>Kategori: Bahasa dan Sastra</p>
+            </article>
+            <article class="product-card">
+                <figure>
+                    <img src="BUKU 4.jpg" alt="Buku">
+                    <figcaption>Algoritma & Pemrograman</figcaption>
+                </figure>
+                <h3>Rp.205.000,00</h3>
+                <p>Kategori: Teknik Informatika</p>
+            </article>
         </section>
 
         <section class="contact" id="Contact">
@@ -137,5 +164,6 @@
     </footer>
 
 </body>
+<script src="script.js"></script>
 
 </html>

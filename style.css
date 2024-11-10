@@ -15,6 +15,7 @@ header {
     padding: 10px;
     top: 0;
     left: 0;
+    z-index: 1000;
 }
 
 header img {
@@ -42,7 +43,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 75px;
+    margin-left: 50px;
 }
 
 nav ul li a {
@@ -54,10 +55,17 @@ nav ul li a {
     font-weight: 600;
 }
 
-nav ul li a:hover {
-    text-decoration: none;
-    background-color: rgb(238, 170, 181);
+nav h1 {
+    font-size: 20px;
+    white-space: nowrap;
+}
 
+button.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
 }
 
 main {
@@ -66,6 +74,7 @@ main {
     align-items: center;
     margin-top: 100px;
     padding: 20px;
+    overflow-x: hidden;
 }
 
 section {
@@ -75,6 +84,7 @@ section {
     margin-top: 50px;
     width: 80%;
     margin-bottom: 100px;
+    overflow-x: hidden;
 }
 
 .about-section p {
@@ -144,11 +154,15 @@ section {
     gap: 20px;
     padding: 20px;
     margin: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: left;
+    scrollbar-width: none;
 }
 
 .product-card {
-    height: 370px;
-    width: 250px;
+    height: 380px;
+    width: 200px;
     border: 1px solid #ddd;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
     margin: 10px;
@@ -164,8 +178,9 @@ section {
 }
 
 .product-card img {
-    max-width: 80%;
+    max-width: 100%;
     height: 200px;
+    width: 150px;
     border-radius: 8px;
 }
 
@@ -174,11 +189,12 @@ section {
     font-size: 20px;
     font-weight: bold;
     color: #d9b2d4;
-    margin-top: 10px;
+    margin-top: 18px;
+    margin-bottom: 10px;
 }
 
 .product-card figcaption {
-    font-size: 16px;
+    font-size: 13px;
     margin: 0px 0;
     color: #333;
     height: 45px;
@@ -187,7 +203,7 @@ section {
 .product-card p {
     height: 40px;
     color: #555;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 footer {
@@ -228,7 +244,6 @@ footer {
     flex-direction: column;
 }
 
-
 .contact form {
     width: 100%;
     max-width: 700px;
@@ -238,6 +253,7 @@ footer {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 30px;
     margin-top: 40px;
+    text-align: left;
 }
 
 .contact input,
@@ -257,9 +273,182 @@ footer {
     color: white;
     font-weight: bold;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
-.contact button:hover {
-    background-color: #efb8e6;
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    nav {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: pink;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        text-align: left;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    button.menu-toggle {
+        display: inline-block;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav h1 {
+        font-size: 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        margin-top: 80px;
+    }
+
+    section {
+        width: 90%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .about-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .about-section img {
+        max-width: 180px;
+        margin-bottom: 10px;
+        order: -1;
+    }
+
+    .services-section h2 {
+        font-size: 24px;
+        margin: 5px;
+    }
+
+    .services-section p {
+        font-size: 14px;
+    }
+
+    .table th,
+    .table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .products {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: left;
+    }
+
+    .product-card {
+        flex: 0 0 auto;
+        height: 380px;
+        width: 200px;
+    }
+
+    .product-card img {
+        max-width: 100%;
+        height: 200px;
+        width: 150px;
+        border-radius: 8px;
+    }
+
+    footer {
+        font-size: 12px
+    }
+}
+
+@media (min-width: 780px) and (max-width: 1024px) {
+    header {
+        padding: 15px;
+    }
+
+    nav {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav h1 {
+        font-size: 22px;
+    }
+
+    .about-section {
+        text-align: left;
+        padding: 20px 15px;
+    }
+
+    .about-section img {
+        max-width: 250px;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .services-section h2 {
+        font-size: 28px;
+    }
+
+    .services-section p {
+        font-size: 16px;
+    }
+
+    .table th,
+    .table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .product-card {
+        width: 220px;
+    }
+
+    .product-card img {
+        height: 180px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    .contact form {
+        padding: 20px;
+    }
+
+    .contact input,
+    .contact textarea {
+        font-size: 14px;
+    }
 }
